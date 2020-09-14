@@ -1,0 +1,26 @@
+<div class="container">
+    <app-message-card [data]="[MessageDetails]" [Flage]=true [detailes]=true></app-message-card>
+</div>
+<div class="container">
+    <form novalidate [formGroup]='replyForm' (ngSubmit)='addReply()'>
+        <div class="row form-group">
+            <div class=" offset-md-2 col-md-6">
+                <input class="form-control" placeholder="reply....." id="reply" type="text" formControlName='reply'>
+            </div>
+            <div class=" col-md-3">
+                <button class="btn btn-primary mr-3" type="submit" style="width: 80px;"
+            [disabled]="!replyForm.valid">add</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        <p>Author: <strong>{{MessageDetails.replies.authorName}}</strong> </p>
+        <p><small>{{MessageDetails.replies.createdIn.date}}</small>&nbsp;&nbsp;&nbsp;<small class="float-right">{{MessageDetails.replies.createdIn.time}}</small></p>
+    </div>
+    <div class="card-body">
+<p><strong>{{MessageDetails.replies.reply}}</strong></p>
+    </div>
+  </div>

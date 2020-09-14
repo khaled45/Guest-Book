@@ -1,0 +1,12 @@
+*{
+    line-height: 20px;
+}
+p{
+    margin-bottom: 0px;
+}
+.card-header{
+    font-size: .9rem;
+}
+.xxc{
+    display: block; padding-right: 16px;
+}
